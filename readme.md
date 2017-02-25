@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/NorthMcCormick/A-D-D.svg?branch=master)](https://travis-ci.org/NorthMcCormick/A-D-D)
-
-[![Coverage Status](https://coveralls.io/repos/github/NorthMcCormick/A-D-D/badge.svg?branch=master)](https://coveralls.io/github/NorthMcCormick/A-D-D?branch=master)
+[![Build Status](https://travis-ci.org/NorthMcCormick/A-D-D.svg?branch=master)](https://travis-ci.org/NorthMcCormick/A-D-D) [![Coverage Status](https://coveralls.io/repos/github/NorthMcCormick/A-D-D/badge.svg?branch=master)](https://coveralls.io/github/NorthMcCormick/A-D-D?branch=master) <img src="http://www.northmccormick.com/content/images/2017/02/build-with-love@2x.png" height="20">
 
 # Automatic Data Denormalizer
 
