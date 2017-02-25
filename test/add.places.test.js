@@ -4,7 +4,7 @@ var Places = require('./../lib/index.js').Places;
 
 var helpers = require('./test.helpers.js');
 
-describe('Places', function() {
+describe('Places (Twitter)', function() {
 
 	// Init
 	it('should init with valid places schema', function() {

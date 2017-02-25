@@ -93,6 +93,11 @@ var twitter = {
 			},
 			_expectedPath: '/userTweets/test_user_1/RAND_KEY_8DUH4J3KSJD'
 		}]
+	},
+	duplicated: {
+		valid: [
+			[{ tweet: 'Wow hello this is my tweet, how cool is this' }, 'test_user_1', 'test_user_1']
+		]
 	}
 }
 

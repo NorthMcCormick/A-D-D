@@ -4,7 +4,7 @@ var Denormalizer = require('./../lib/index.js').Denormalizer;
 
 var helpers = require('./test.helpers.js');
 
-describe('Denormalizer', function() {
+describe('Denormalizer (Twitter)', function() {
 
 	// Constructing
 	it('should construct with valid schema', function() {

@@ -4,7 +4,7 @@ var Variables = require('./../lib/index.js').Variables;
 
 var helpers = require('./test.helpers.js');
 
-describe('Variables', function() {
+describe('Variables (Twitter)', function() {
 	// Values
 
 	it('should should get the variable values for valid data', function() {
@@ -25,5 +25,14 @@ describe('Variables', function() {
 		var newPath = Variables.replaceVariablesInString(helpers.samples.twitter.variables.valid[0].path, helpers.samples.twitter.variables.valid[0]._expectedVariables);
 
 		expect(newPath).to.equal(helpers.samples.twitter.variables.valid[0]._expectedPath);
+	});
+
+	it('should get the value to duplicate correctly with valid data', function() {
+
+		helpers.samples.twitter.schema.valid.places.forEach(function(place, index){ 
+			var duplicatedData = Variables.getValueToDuplicate(helpers.samples.twitter.schema.valid.places[index], helpers.samples.twitter.data.valid[0]);
+
+			expect(duplicatedData).to.eql(helpers.samples.twitter.duplicated.valid[0][index]);
+		})
 	});
 });

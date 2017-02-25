@@ -4,7 +4,7 @@ var Validators = require('./../lib/index.js').Validators;
 
 var helpers = require('./test.helpers.js');
 
-describe('Validators', function() {
+describe('Validators (Twitter)', function() {
 
 	// Schema
 	it('should validate valid schema', function() {
