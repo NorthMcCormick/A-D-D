@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "repo": "https://github.com/NorthMcCormick/A-D-D",
   "scripts": {
-    "test": "mocha test --recursive --watch"
+    "test": "./node_modules/mocha/bin/mocha test --recursive"
   },
   "keywords": [
     "nosql",
@@ -15,7 +15,8 @@
   "author": "North McCormick <northmccormick@icloud.com> (http://northmccormick.com)",
   "license": "ISC",
   "devDependencies": {
-    "chai": "^3.5.0"
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
   },
   "dependencies": {
     "colors": "^1.1.2",
