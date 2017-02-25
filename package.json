@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Automatic data denormalizer for small NoSQL projects",
   "main": "lib/index.js",
+  "repo": "https://github.com/NorthMcCormick/A-D-D",
   "scripts": {
     "test": "mocha tests --recursive --watch"
   },
