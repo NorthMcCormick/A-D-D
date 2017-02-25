@@ -70,10 +70,28 @@ var twitter = {
 	data: {
 		valid: [{
 			handle: "test_user_1",
-			tweet: "Wow hello this is my tweet, how cool is this"
+			tweet: "Wow hello this is my tweet, how cool is this",
+			$key: "RAND_KEY_8DUH4J3KSJD"
 		}],
 		invalid: [{
 			handle: "test_user_2"
+		},
+		{
+			tweet: "This is a tweet without a handle, oops!"
+		}]
+	},
+	variables: {
+		valid: [{
+			path: '/userTweets/{{userHandle}}/{{key}}',
+			variables: {
+				userHandle: 'handle',
+				key: '$key'
+			},
+			_expectedVariables: { 
+				userHandle: 'test_user_1', 
+				key: 'RAND_KEY_8DUH4J3KSJD'
+			},
+			_expectedPath: '/userTweets/test_user_1/RAND_KEY_8DUH4J3KSJD'
 		}]
 	}
 }
