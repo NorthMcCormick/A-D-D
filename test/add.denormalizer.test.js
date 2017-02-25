@@ -9,7 +9,7 @@ describe('Denormalizer', function() {
 	// Constructing
 	it('should construct with valid schema', function() {
 		var denormalizer = new Denormalizer({
-			schema: helpers.validSchema
+			schema: helpers.samples.twitter.schema.valid
 		});
 
 		expect(denormalizer.isConstructed()).to.equal(true);
@@ -17,7 +17,7 @@ describe('Denormalizer', function() {
 
 	it('should fail to construct with invalid schema', function() {
 		var denormalizer = new Denormalizer({
-			schema: helpers.invalidSchema
+			schema: helpers.samples.twitter.schema.invalid
 		});
 
 		expect(denormalizer.isConstructed()).to.equal(false);
