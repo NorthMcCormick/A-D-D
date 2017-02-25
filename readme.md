@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/NorthMcCormick/A-D-D.svg?branch=master)](https://travis-ci.org/NorthMcCormick/A-D-D)
 
+[![Coverage Status](https://coveralls.io/repos/github/NorthMcCormick/A-D-D/badge.svg?branch=master)](https://coveralls.io/github/NorthMcCormick/A-D-D?branch=master)
+
 # Automatic Data Denormalizer
 
 A-D-D for short, the automatic data denormalizer takes a developer defined schema and uses an input to duplicate the data.
