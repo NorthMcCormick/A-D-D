@@ -2,6 +2,8 @@
 
 # Automatic Data Denormalizer
 
+*Note: This is still in beta and is subject to change. PRs, suggestions, and issues are welcome.*
+
 A-D-D for short, the automatic data denormalizer takes a developer defined schema and uses an input to duplicate the data.
 
 ## Feature Goals
