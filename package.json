@@ -1,0 +1,24 @@
+{
+  "name": "a-d-d",
+  "version": "1.0.0",
+  "description": "Automatic data denormalizer for small NoSQL projects",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha tests --recursive --watch"
+  },
+  "keywords": [
+    "nosql",
+    "denormalize",
+    "database"
+  ],
+  "author": "North McCormick <northmccormick@icloud.com> (http://northmccormick.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0"
+  },
+  "dependencies": {
+    "colors": "^1.1.2",
+    "firebase-admin": "^4.1.1",
+    "q": "^1.4.1"
+  }
+}
