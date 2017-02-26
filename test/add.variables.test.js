@@ -9,15 +9,13 @@ describe('Variables (Twitter)', function() {
 
 	it('should should get the variable values for valid data', function() {
 		var values = Variables.getVariableValues(helpers.samples.twitter.variables.valid[0].variables, helpers.samples.twitter.data.valid[0]);
-		console.log('Values?');
-		console.log(values);
+
 		expect(values).to.eql(helpers.samples.twitter.variables.valid[0]._expectedVariables);
 	});
 
 	it('should should fail to get the variable values for invalid data', function() {
 		var values = Variables.getVariableValues(helpers.samples.twitter.variables.valid[0].variables, helpers.samples.twitter.data.invalid[1]);
-		console.log('Values?');
-		console.log(values);
+
 		expect(values).to.not.eql(helpers.samples.twitter.variables.valid[0]._expectedVariables);
 	});
 
@@ -28,7 +26,6 @@ describe('Variables (Twitter)', function() {
 	});
 
 	it('should get the value to duplicate correctly with valid data', function() {
-
 		helpers.samples.twitter.schema.valid.places.forEach(function(place, index){ 
 			var duplicatedData = Variables.getValueToDuplicate(helpers.samples.twitter.schema.valid.places[index], helpers.samples.twitter.data.valid[0]);
 
