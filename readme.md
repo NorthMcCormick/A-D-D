@@ -6,6 +6,12 @@
 
 A-D-D for short, the automatic data denormalizer takes a developer defined schema and uses an input to duplicate the data.
 
+## Changelog
+
+#### 0.1.0
+
+First release, yay! Basically this readme is everything in the first release.
+
 ## Feature Goals
 
 ### Handle update and remove
