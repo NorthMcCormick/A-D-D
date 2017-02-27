@@ -86,7 +86,6 @@ Database.prototype.delete = function(path) {
 	if(Config.logs.debug) console.log(path);
 
 	return Q.promise(function(resolve, reject) {
-		// Todo: This should become smarter to match the database name in the path for multi-database denormalizing
 		if(vm.db !== null) {
 			var parsedPath = parsePath(path);
 

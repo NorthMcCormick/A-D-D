@@ -22,19 +22,21 @@ The ability to define a function for a property and perform a calculation on it.
 
 ## Installation
 
-Todo
+NPM: `npm install a-d-d --save`
 
 ## Database Handlers
 
 A-D-D allows you to write your own handlers for any database. You can even use the idea of the handler as a custom hook or extend them to do 
+
+There is a template handler in the repo under `databaseHandlers`. There is also one for IonicDB and Firebase to get you started.
 
 ## Quick Start
 
 Require the library into your node project:
 
 ```javascript
-var ADDConfig			 	= require('add').Config;
-var ADDDenormalizer 		= require('add').Denormalizer;
+var ADDConfig			 	= require('a-d-d').Config;
+var ADDDenormalizer 		= require('a-d-d').Denormalizer;
 ```
 
 Load your databse handling object(s):

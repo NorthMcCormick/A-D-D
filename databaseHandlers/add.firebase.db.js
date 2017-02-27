@@ -44,7 +44,6 @@ Database.prototype.set = function(path, data) {
 	if(Config.logs.debug) console.log(data);
 
 	return Q.promise(function(resolve, reject) {
-		// Todo: This should become smarter to match the database name in the path for multi-database denormalizing
 		if(vm.db !== null) {
 			vm.db.ref(path).set(data, function(error) {
 				if(error) {
@@ -69,7 +68,6 @@ Database.prototype.delete = function(path, data) {
 	if(Config.logs.debug) console.log(data);
 
 	return Q.promise(function(resolve, reject) {
-		// Todo: This should become smarter to match the database name in the path for multi-database denormalizing
 		if(vm.db !== null) {
 			vm.db.ref(path).set(null, function(error) {
 				if(error) {

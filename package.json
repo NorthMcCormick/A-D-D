@@ -1,9 +1,12 @@
 {
   "name": "a-d-d",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Automatic data denormalizer for small NoSQL projects",
   "main": "lib/index.js",
-  "repo": "https://github.com/NorthMcCormick/A-D-D",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NorthMcCormick/A-D-D"
+  },
   "scripts": {
     "old_test": "./node_modules/mocha/bin/mocha test --recursive",
     "test": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec",
@@ -24,7 +27,6 @@
   },
   "dependencies": {
     "colors": "^1.1.2",
-    "firebase-admin": "^4.1.1",
     "q": "^1.4.1"
   }
 }
