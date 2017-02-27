@@ -8,10 +8,6 @@ A-D-D for short, the automatic data denormalizer takes a developer defined schem
 
 ## Feature Goals
 
-### Multi-database
-
-The ability to have multiple realtime databases loaded so that you can duplicate data between them even if they are of different providers.
-
 ### Handle update and remove
 
 The initial version of the lib is built on the idea of adding data, updating and removing will come along and will be able to utilize the same schema that the add does.
@@ -33,16 +29,28 @@ Todo
 Require the library into your node project:
 
 ```javascript
-var ADDConfig = require('add').Config;
-var ADDDenormalizer = require('add').Denormalizer;
+var ADDConfig			 	= require('add').Config;
+var ADDDenormalizer 		= require('add').Denormalizer;
 ```
 
-Assign your database (currently only supporting a Firebase database reference):
+Load your databse handling object(s):
 
 ```javascript
-var db = admin.database();
+var ADDDatabase_Firebase 	= require('./add.firebase.db.js');
+var ADDDatabase_IonicDB 	= require('./add.ionicdb.db.js');
+```
 
-ADDConfig.database.default = db;
+Create your databases and assign them to the config:
+
+```javascript
+var firebaseAdminDB 		= admin.database(); // From the Firebase Admin SDK
+var ionicAdminDb 			= new IonicDB(db_settings); // From the Ionic SDK
+
+var myFirebaseDatabase 		= new ADDDatabase_Firebase(firebaseAdminDB);
+var myIonicDatabase 		= new ADDDatabase_IonicDB(ionicAdminDb);
+
+ADDConfig.database.ionic 	= myIonicDatabase;
+ADDConfig.database.default 	= myFirebaseDatabase;
 ```
 
 Create a denormalizer object: 
@@ -73,7 +81,25 @@ var tweetDenormalizer = new ADDDenormalizer({
 			type: 'string',
 			path: '/lastUser',
 			variables: {},
-			property: 'handle'
+			property: 'handle',
+			options: {
+				ignore: {
+					delete: true // Ignore the request for delete
+				}
+			}
+		},
+		{
+			operation: 'set',
+			type: 'object',
+			path: 'allTweets/{{key}}',
+			variables: {
+				userHandle: 'handle',
+				key: '$key'
+			},	
+			properties: ['tweet'],
+			options: {
+				database: 'ionic' // Note, we set the database here. This will perform the operations on that db.
+			}
 		}]
 	}
 });
@@ -264,9 +290,11 @@ Example: If we want to show what user last did something we want to update it bu
 }
 ```
 
+#### schema.places.options.database: String
+
+This is the string name of a previously configured database you would like to use. If nothing is defined it will use 'default'.
 
 ## Required Libraries
 
 - Q
 - Colors
-- A database reference from Firebase Admin or Firebase SDK
