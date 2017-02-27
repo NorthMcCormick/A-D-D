@@ -24,6 +24,10 @@ The ability to define a function for a property and perform a calculation on it.
 
 Todo
 
+## Database Handlers
+
+A-D-D allows you to write your own handlers for any database. You can even use the idea of the handler as a custom hook or extend them to do 
+
 ## Quick Start
 
 Require the library into your node project:
